@@ -54,4 +54,38 @@ publiko/
 
 ---
 
+## Cómo hacer buenos archivos README
+
+Un buen README es la carta de presentación de tu proyecto. Sigue estas recomendaciones para escribirlo bien:
+
+### Estructura recomendada
+
+1. **Título y descripción breve** — Nombre del proyecto y una frase de qué trata.
+2. **Estado** — Indicador de madurez (ej. 🚧 en desarrollo, ✅ estable).
+3. **Comenzando / Requisitos previos** — Qué se necesita antes de usar el proyecto.
+4. **Instalación** — Comandos para instalar dependencias y poner el proyecto en marcha.
+5. **Uso** — Ejemplos claros de cómo usar el proyecto (bloques de código).
+6. **Estructura del proyecto** — Árbol de carpetas con el propósito de cada una.
+7. **Contribuir** — Pasos para hacer fork, rama, commit y pull request.
+8. **Licencia** — Licencia bajo la cual se distribuye el proyecto.
+
+### Buenas prácticas
+
+- Usa encabezados claros y jerárquicos (`#`, `##`, `###`).
+- Incluye bloques de código con el lenguaje especificado (ej. ```bash).
+- Usa listas y tablas para organizar información.
+- Mantén el lenguaje claro y conciso; evita jerga innecesaria.
+- Actualiza el README cada vez que cambie la instalación o el uso del proyecto.
+- Agrega un emoji de estado al inicio para dar contexto rápido.
+
+### Ejemplo de bloque de instalación
+
+```bash
+git clone https://github.com/usuario/proyecto.git
+cd proyecto
+# instrucciones de instalación
+```
+
+---
+
 *Desarrollado con ❤️ por [osielxxzamudio-eng](https://github.com/osielxxzamudio-eng)*
