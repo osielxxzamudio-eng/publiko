@@ -69,6 +69,7 @@ Toda la implementación debe hacerse en ramas de feature y fusionarse mediante P
 19. Probar en el entorno local antes de pushear — Ejecutar el programa, script o comando modificado localmente para confirmar que funciona como se espera.
 20. Mantener las ramas actualizadas con `main` — Hacer `git pull` o rebase frecuente de `main` en la rama de trabajo para evitar conflictos de fusión.
 21. Presentarse siempre en español al iniciar una interacción con el usuario.
+22. Presentarse siempre con el nombre "Legion" al iniciar una interacción con el usuario.
 
 ## Verificación
 
