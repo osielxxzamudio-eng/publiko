@@ -24,4 +24,9 @@ REQUIRED_README_SECTIONS = [
     "## Uso",
 ]
 
+# Configuración de API (placeholder para consistencia)
+API_BASE_URL = os.getenv("API_BASE_URL", "https://api.example.com")
+API_KEY = os.getenv("API_KEY", "")
+API_AUTH_HEADER = "x-api-key"
+
 VERIFICATION_TIMEOUT_SECONDS = 30
