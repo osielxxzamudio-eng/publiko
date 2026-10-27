@@ -58,6 +58,17 @@ Toda la implementación debe hacerse en ramas de feature y fusionarse mediante P
 9. Cualquier cambio estructural debe documentarse en `AGENTS.md` y `README.md`.
 10. Usar ramas de trabajo dedicadas (`feature/nombre`) y nunca commitear directamente a `main`.
 
+11. Verificar dependencias antes de usarlas — Solo usar librerías y frameworks confirmados como compatibles con el código base actual.
+12. Escribir código completo y funcional — No dejar omisiones, placeholders ni implementaciones a medias sin terminar.
+13. Mantener commits atómicos — Cada commit debe contener cambios relacionados a una sola tarea o propósito claro.
+14. Revisar el diff antes de pushear — Revisar `git diff` y `git status` antes de hacer commit y push para evitar archivos no deseados.
+15. No commitear secrets ni credenciales — Nunca subir claves API, tokens, contraseñas o archivos `.env` con valores reales al repositorio.
+16. Escribir mensajes de commit en español o inglés consistente — Mantener un idioma uniforme en todos los mensajes de commit del repositorio.
+17. Limpiar archivos temporales antes de pushear — Eliminar archivos de compilación, logs, caches y directorios `node_modules`/`__pycache__` antes de hacer commit.
+18. Documentar decisiones de arquitectura — Registrar en `AGENTS.md` o `README.md` cualquier decisión estructural importante que afecte al proyecto.
+19. Probar en el entorno local antes de pushear — Ejecutar el programa, script o comando modificado localmente para confirmar que funciona como se espera.
+20. Mantener las ramas actualizadas con `main` — Hacer `git pull` o rebase frecuente de `main` en la rama de trabajo para evitar conflictos de fusión.
+
 ## Verificación
 
 - Antes de marcar una tarea como completada, ejecutar cualquier prueba o build disponible para confirmar que los cambios funcionan.
