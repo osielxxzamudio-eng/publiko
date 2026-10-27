@@ -11,7 +11,7 @@ Aquí se almacenan las notas de responsabilidades de **largo plazo sin fecha de 
 
 ## Áreas actuales
 
-*Vacío. Añade tu primera área arriba.*
+- `2026-10-27-repository-maintenance.md` — Mantenimiento continuo del repositorio `publiko` (encargado: **Legion**, agente de IA).
 
 ---
 *Mantener este archivo actualizado.*
