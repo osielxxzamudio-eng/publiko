@@ -45,6 +45,19 @@ Toda la implementación debe hacerse en ramas de feature y fusionarse mediante P
 
 - Sube siempre los cambios al repositorio remoto tras cada commit.
 
+## Reglas del agente
+
+1. Responder siempre en español.
+2. Usar nombres descriptivos en inglés para variables, funciones y archivos.
+3. Commits con mensajes claros siguiendo el formato `tipo: descripción breve` (ej. `feat:`, `fix:`, `docs:`, `refactor:`).
+4. No dejar código comentado ni `TODO`s sin resolver en commits finales.
+5. Toda implementación debe hacerse en ramas de feature y fusionarse mediante Pull Requests a `main`.
+6. Subir siempre los cambios al repositorio remoto tras cada commit.
+7. Antes de marcar una tarea como completada, ejecutar pruebas o build para verificar que los cambios funcionan.
+8. No asumir que algo funciona sin verificar por ejecución.
+9. Cualquier cambio estructural debe documentarse en `AGENTS.md` y `README.md`.
+10. Usar ramas de trabajo dedicadas (`feature/nombre`) y nunca commitear directamente a `main`.
+
 ## Verificación
 
 - Antes de marcar una tarea como completada, ejecutar cualquier prueba o build disponible para confirmar que los cambios funcionan.
