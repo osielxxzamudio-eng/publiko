@@ -21,6 +21,25 @@ publiko/
         └── archivos/
 ```
 
+
+## Segundo Cerebro — Cómo se usa
+
+El repositorio incluye una base de conocimiento personal bajo `docs/second-brain/` siguiendo el método **PARA** (Projects, Areas, Resources, Archives):
+
+| Carpeta | Propósito |
+|---------|-----------|
+| `proyectos/` | Iniciativas con resultado concreto y fecha límite |
+| `áreas/` | Responsabilidades que requieren mantenimiento continuo |
+| `recursos/` | Información de referencia sobre temas de interés |
+| `archivos/` | Proyectos, áreas o recursos ya no activos |
+
+### Pasos para usar
+
+1. Crea una nota en Markdown dentro de la carpeta que corresponda.
+2. Usa nombres descriptivos en inglés para los archivos (ej. `2026-10-27-configurar-ci-cd.md`).
+3. Cuando un proyecto finalice o un área deje de activarse, mueve la nota a `archivos/`.
+4. Revisa semanalmente `proyectos/` y `áreas/` para mantener el sistema actualizado.
+
 ## Ramas de trabajo
 
 - `main` — rama principal (estable, producción)
