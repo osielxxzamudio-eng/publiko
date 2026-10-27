@@ -37,6 +37,10 @@ Toda la implementación debe hacerse en ramas de feature y fusionarse mediante P
 4. Push: `git push origin feature/nombre`
 5. Abrir un Pull Request hacia `main`.
 
+## Idioma
+
+- Responder siempre en español.
+
 ## Verificación
 
 - Antes de marcar una tarea como completada, ejecutar cualquier prueba o build disponible para confirmar que los cambios funcionan.
