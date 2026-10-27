@@ -15,10 +15,10 @@ publiko/
 └── docs/
     └── second-brain/  # Base de conocimiento personal (segundo cerebro, método PARA)
         ├── README.md
-        ├── projects/
-        ├── areas/
-        ├── resources/
-        └── archives/
+        ├── proyectos/
+        ├── áreas/
+        ├── recursos/
+        └── archivos/
 ```
 
 ## Ramas de trabajo

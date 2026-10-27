@@ -7,20 +7,20 @@ Este directorio alberga un "segundo cerebro" personal basado en el método **PAR
 ```
 docs/second-brain/
 ├── README.md            # Esta guía
-├── projects/            # Proyectos activos con objetivo definido y fecha de fin
-├── areas/               # Áreas de responsabilidad de largo plazo (sin fecha de fin)
-├── resources/           # Temas de interés y referencia sin obligación activa
-└── archives/            # Elementos de las tres categorías anteriores ya completados o inactivos
+├── proyectos/           # Proyectos activos con objetivo definido y fecha de fin
+├── áreas/               # Áreas de responsabilidad de largo plazo (sin fecha de fin)
+├── recursos/            # Temas de interés y referencia sin obligación activa
+└── archivos/            # Elementos de las tres categorías anteriores ya completados o inactivos
 ```
 
 ## Método PARA
 
 | Carpeta | Propósito | Ejemplos |
 |---------|-----------|----------|
-| `projects/` | Iniciativas con resultado concreto y fecha límite | Crear sitio web, escribir artículo, configurar CI/CD |
-| `areas/` | Responsabilidades que requieren mantenimiento continuo | Finanzas, salud, documentación del equipo, infraestructura |
-| `resources/` | Información de referencia sobre temas de interés | Tutoriales de Git, notas de conferencia, enlaces útiles |
-| `archives/` | Proyectos, áreas o recursos ya no activos | Proyecto terminado v1, área descontinuada |
+| `proyectos/` | Iniciativas con resultado concreto y fecha límite | Crear sitio web, escribir artículo, configurar CI/CD |
+| `áreas/` | Responsabilidades que requieren mantenimiento continuo | Finanzas, salud, documentación del equipo, infraestructura |
+| `recursos/` | Información de referencia sobre temas de interés | Tutoriales de Git, notas de conferencia, enlaces útiles |
+| `archivos/` | Proyectos, áreas o recursos ya no activos | Proyecto terminado v1, área descontinuada |
 
 ## Cómo usar
 

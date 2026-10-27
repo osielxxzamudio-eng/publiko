@@ -1,6 +1,6 @@
-# Archives — Elementos Archivados
+# Archivos — Elementos Archivados
 
-Aquí se almacenan proyectos completados, áreas descontinuadas y recursos ya no activos, movidos desde `projects/`, `areas/` o `resources/`.
+Aquí se almacenan proyectos completados, áreas descontinuadas y recursos ya no activos, movidos desde `proyectos/`, `áreas/` o `recursos/`.
 
 ## Propósito
 
