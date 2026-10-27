@@ -41,6 +41,10 @@ Toda la implementación debe hacerse en ramas de feature y fusionarse mediante P
 
 - Responder siempre en español.
 
+## Sube cambios al repositorio
+
+- Sube siempre los cambios al repositorio remoto tras cada commit.
+
 ## Verificación
 
 - Antes de marcar una tarea como completada, ejecutar cualquier prueba o build disponible para confirmar que los cambios funcionan.
