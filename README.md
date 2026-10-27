@@ -1,52 +1,103 @@
 # publiko
 
-Descripción del proyecto aquí.
+`publiko` es un **framework modular de skills** (módulos funcionales independientes) para agentes de IA. Cada skill vive bajo `skills/<nombre>/` siguiendo un patrón estandarizado de 6 archivos y puede verificarse y crearse nuevas mediante las propias herramientas del repositorio.
 
 ## Estado
 
-🚧 Repositorio nuevo — en configuración inicial.
+✅ Estable — 4 skills implementadas y verificadas.
 
 ## Comenzando
 
 ### Requisitos previos
 
-- [Lista de dependencias o herramientas necesarias]
+- Python 3.10+
+- Una API key de Exa Labs (para las skills de búsqueda e investigación): `export EXA_API_KEY="tu-api-key"`
 
 ### Instalación
 
 ```bash
 git clone https://github.com/osielxxzamudio-eng/publiko.git
 cd publiko
+pip install -r requirements.txt
 ```
 
 ### Uso
 
 ```bash
-# Ejemplo de uso
+# Verificar que todas las skills están correctas
+python verify_skills.py
+
+# Ejecutar las pruebas unitarias
+python -m pytest tests/ -v
+
+# Ver ejemplos de uso (web_search, investigacion, skill_create, skill_verification)
+python example_usage.py
+python example_investigacion.py
+python example_skill_create.py
+python example_skill_verification.py
 ```
+
+## Skills disponibles
+
+| Skill | Propósito | Operaciones principales |
+|-------|-----------|----------------------|
+| `web_search` | Búsqueda web vía API de Exa Labs | `search`, `contents`, `find_similar` |
+| `investigacion` | Investigación académica vía Exa Labs | `research`, `methodology`, `literature_review` |
+| `skill_create` | Scaffolder: crea/valida/lista skills | `scaffold`, `validate`, `list_skills`, `generate_file` |
+| `skill_verification` | Verifica la integridad de todas las skills | `verify_all`, `verify_skill`, `repository_health` |
 
 ## Estructura del proyecto
 
 ```
 publiko/
-├── README.md
-├── AGENTS.md
+├── README.md                          # Documentación general del proyecto
+├── AGENTS.md                          # Instrucciones para agentes de IA
+├── verify_skills.py                   # Script CLI de verificación de todas las skills
+├── requirements.txt                   # Dependencias del proyecto
+├── example_usage.py                   # Ejemplo de uso de web_search
+├── example_investigacion.py           # Ejemplo de uso de investigacion
+├── example_skill_create.py            # Ejemplo de uso de skill_create
+├── example_skill_verification.py      # Ejemplo de uso de skill_verification
+├── skills/                            # Directorio de skills
+│   ├── web_search/
+│   ├── investigacion/
+│   ├── skill_create/
+│   └── skill_verification/
+├── tests/                             # Pruebas unitarias
 └── docs/
-    └── second-brain/          # Base de conocimiento personal (segundo cerebro)
+    └── second-brain/                  # Base de conocimiento personal (método PARA)
         ├── README.md
-        ├── proyectos/         # Proyectos activos con fecha de fin
-        ├── áreas/             # Áreas de responsabilidad de largo plazo
-        ├── recursos/          # Temas de referencia sin obligación activa
-        └── archivos/          # Elementos completados o inactivos
+        ├── proyectos/
+        ├── áreas/
+        ├── recursos/
+        └── archivos/
 ```
+
+## Patrón de una skill
+
+Cada skill contiene exactamente estos 6 archivos:
+
+```
+skills/<nombre_skill>/
+├── __init__.py      # Exporta la clase principal: from .skill import <Nombre>Skill
+├── config.py        # Constantes, variables de entorno, URLs, timeouts
+├── models.py        # Modelos Pydantic (Request, Response, Result)
+├── client.py        # Cliente HTTP async (httpx.AsyncClient)
+├── skill.py         # Clase principal <Nombre>Skill con métodos de alto nivel
+└── README.md        # Documentación: título (#), sección Instalación, sección Uso
+```
+
+Consulte `AGENTS.md` para las reglas detalladas de creación y verificación de skills.
 
 ## Contribuir
 
 1. Haz un fork del repositorio
 2. Crea una rama (`git checkout -b feature/nombre`)
-3. Commit tus cambios (`git commit -m 'feat: descripcion'`)
-4. Push a la rama (`git push origin feature/nombre`)
-5. Abre un Pull Request
+3. Implementa siguiendo el patrón de skill
+4. Verifica: `python verify_skills.py` y `python -m pytest tests/ -v`
+5. Commit tus cambios (`git commit -m 'feat: descripción'`)
+6. Push a la rama (`git push origin feature/nombre`)
+7. Abre un Pull Request hacia `main`
 
 ## Licencia
 
