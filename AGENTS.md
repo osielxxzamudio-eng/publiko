@@ -49,6 +49,48 @@ skills/<nombre_skill>/
 └── README.md        # Documentación: título (#), sección Instalación, sección Uso
 ```
 
+## Entorno de ejecución — Cline Cloud
+
+Los agentes de este repositorio operan dentro de **Cline Cloud**, una plataforma de agentes de IA (Cline, Inc.) que gestiona contenedores sandbox remotos. Todo el trabajo se ejecuta en la nube; no es necesario instalar nada localmente.
+
+### Cómo funciona
+
+- Cada interacción con el agente se guarda como un **"run"** asociado a una **session ID** (ej. `tsk-01M5Z546RSZNAXF8DA3DBGHZ3E`).
+- El proveedor de modelo es `cline` (ej. `dots-studio/dots-3-note-preview:free`).
+- El contenedor sandbox se monta como `/workspace` y es donde se clona el repositorio.
+- GitHub authentication se inyecta transparentemente por el infraestructura; no se necesitan tokens ni `gh auth login`.
+
+### La carpeta `.cline-home`
+
+El directorio `.cline-home` es el **home local del agente dentro del sandbox**. Contiene metadatos de gestión interna:
+
+| Ruta | Contenido |
+|------|-----------|
+| `.cline-home/data/sessions/tsk-<id>/tsk-<id>.json` | Datos de la session actual (modelo, rama de git, checkpoints, usage) |
+| `.cline-home/data/sessions/tsk-<id>/tsk-<id>.messages.json` | Hilo completo de mensajes de la conversación |
+| `.cline-home/data/db/*.db` | Bases de datos SQLite (sessions, tasks, teams, hubs, cron) |
+| `.cline-home/rules/sandbox-resources.md` | Reglas de recursos del sandbox (CPU, memoria, disco) |
+| `.cline-home/data/locks/` | Locks de instancias de hubs |
+| `.cline-home/logs/hooks.jsonl` | Logs de hooks |
+
+**No modifiques `.cline-home` a mano**; es de gestión interna del agente. Tampoco lo commites (está en `.gitignore`).
+
+### Identificadores con esquema `cline://`
+
+Las rutas como `cline://cache/tsk-<id>/...result.txt` son **identificadores internos del sistema Cline** que referencian archivos cacheados por el framework. No son archivos mágicos: son punteros a los artifacts generados durante una ejecución. No los uses como fuente de verdad; los datos reales siempre están en `/workspace`.
+
+### Recursos del sandbox
+
+- **CPU**: hasta 4 vCPU (no uses `nproc` para calcular paralelismo; el host tiene más núcleos pero tú no).
+- **Memoria**: 6 GiB límite duro. El contenedor del agente y todos los procesos que inicia comparten este límite.
+- **Disco**: 16 Gi para `/workspace` y el home. Escrituras fuera de `/workspace` (ej. `/tmp`) están limitadas a 4 Gi.
+
+### Comunicación con el usuario
+
+- Presentate siempre en español.
+- Presentate siempre con el nombre **Legion** al iniciar una interacción.
+- No asumas que algo funciona sin verificar por ejecución.
+
 ## Estructura mental para crear una skill (patrón obligatorio)
 
 ### Reglas del patrón:
