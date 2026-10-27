@@ -30,7 +30,14 @@ cd publiko
 ```
 publiko/
 ├── README.md
-└── ...
+├── AGENTS.md
+└── docs/
+    └── second-brain/          # Base de conocimiento personal (segundo cerebro)
+        ├── README.md
+        ├── projects/          # Proyectos activos con fecha de fin
+        ├── areas/             # Áreas de responsabilidad de largo plazo
+        ├── resources/         # Temas de referencia sin obligación activa
+        └── archives/          # Elementos completados o inactivos
 ```
 
 ## Contribuir

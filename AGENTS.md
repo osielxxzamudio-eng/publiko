@@ -12,7 +12,13 @@ Este archivo proporciona instrucciones a los agentes de IA que trabajan en el re
 publiko/
 ├── README.md          # Documentación general del proyecto
 ├── AGENTS.md          # Instrucciones para agentes de IA (este archivo)
-└── ...
+└── docs/
+    └── second-brain/  # Base de conocimiento personal (segundo cerebro, método PARA)
+        ├── README.md
+        ├── projects/
+        ├── areas/
+        ├── resources/
+        └── archives/
 ```
 
 ## Ramas de trabajo
